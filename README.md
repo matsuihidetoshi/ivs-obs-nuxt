@@ -107,12 +107,34 @@
 
 ***
 
-## 2. **OBS** のインストール・設定
+## 2. **OBS** のインストール・設定(※Mac での方法のみご案内します)
 
 ### **OBS** のインストール
 - [**OBS のインストールサイト**](https://obsproject.com/ja) へアクセスします。
 
 ***
+
+<img width="1440" alt="スクリーンショット 2021-06-30 13 41 33" src="https://user-images.githubusercontent.com/38583473/123903254-509b7d80-d9a9-11eb-850f-4bd85929a6de.png">
+
+- **Windows**, **Mac OS**, **Linux** の内、該当するものをクリックします（ダウンロードが始まります)。
+
+***
+
+<img width="1440" alt="スクリーンショット 2021-06-30 13 46 41" src="https://user-images.githubusercontent.com/38583473/123903584-ecc58480-d9a9-11eb-91dd-19f3759be4a6.png">
+
+- ダウンロードが完了したら、画像の通りの箇所をクリックします。
+
+***
+
+<img width="697" alt="スクリーンショット 2021-06-30 13 29 47" src="https://user-images.githubusercontent.com/38583473/123903632-0797f900-d9aa-11eb-9965-3694bbf92b88.png">
+
+- 画像のような表示になるので、左から右へドラッグ&ドロップします。
+
+***
+
+<img width="1440" alt="スクリーンショット 2021-06-30 13 50 38" src="https://user-images.githubusercontent.com/38583473/123904285-2fd42780-d9ab-11eb-983a-c7630f925d5d.png">
+
+- アプリケーションとしてメニューから選択できるようになっていればOKです。
 
 ***
 
