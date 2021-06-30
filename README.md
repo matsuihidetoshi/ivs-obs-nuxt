@@ -8,23 +8,23 @@
 しかし、既存サービスを活用する場合カスタマイズが難しく、何かと不自由もあるかと思います。  
 
 そこで今回は、 **AWS** で提供されている **Amazon Interactive Video Service (IVS)** と **AWS Amplify** 、  
-また **StreamYard** と言うライブストリームサービスを活用して、自分だけのオリジナル配信サイトを構築する方法をご紹介します！
+また **OBS** と言うライブストリームアプリケーションを活用して、自分だけのオリジナル配信サイトを構築する方法をご紹介します！
 
 ## 必要要件
 
 - 下記サービスの有効なアカウント
   - **AWS**
   - **GitHub**
-- **StreamYard** の **Basic** プラン（本資料内で登録・設定方法をご案内します）以上のアカウント
-- 数十円程度の **AWS** 利用料および **StreamYard** の最低 $20/month の利用料
+- 数十円程度の **AWS** 利用料
+- ストリーミングアプリケーションの **OBS** のインストール
 
 ## アーキテクチャ
 - 今回のハンズオンで構築するアーキテクチャです。
 
-![ivs-nuxt (1)](https://user-images.githubusercontent.com/38583473/122328796-3bffc400-cf6b-11eb-9d0b-bd146d2801aa.png)
+![ivs-obs-nuxt](https://user-images.githubusercontent.com/38583473/123924246-bd704100-d9c4-11eb-91dd-7ebcd2474ecd.png)
 
 - **Amplify Console** を使い、 **Nuxt.js** で作成した静的ページをデプロイ・ホスティングします。
-- **StreamYard** という配信データを送信するWebサービスを使って、 **Amazon IVS** に対してPC上から動画データを送信します。
+- **OBS** という配信データを送信するアプリケーションを使って、 **Amazon IVS** に対してPC上から動画データを送信します。
 - Webブラウザ側から、 **amazon-ivs-player** や、 **Video.js** といったライブラリを利用して、 **Amazon IVS** が提供する再生URLからストリーミングデータを取得して表示します。
 
 ***
@@ -43,7 +43,7 @@
 ## 目次
 
 1. **IVS** の設定
-2. **StreamYard** の登録・設定
+2. **OBS** のインストール・設定
 3. **Nuxt.js** プロジェクトのセットアップ
 4. **Amplify Console** でデプロイ
 
@@ -107,79 +107,76 @@
 
 ***
 
-## 2. **StreamYard** の登録・設定
+## 2. **OBS** のインストール・設定(※Mac での方法のみご案内します)
 
-### **StreamYard** に登録
-- [**StreamYard のトップページ**](https://streamyard.com/) へアクセスします。
-
-***
-
-<img width="1438" alt="streamyard_email" src="https://user-images.githubusercontent.com/38583473/119226345-8b58fd00-bb43-11eb-96a4-7f14efd390cc.png">
-
-- 上記にメールアドレスを入力して、 **Get started** をクリックします。
+### **OBS** のインストール
+- [**OBS のインストールサイト**](https://obsproject.com/ja) へアクセスします。
 
 ***
 
-<img width="866" alt="streamyard_confirmation" src="https://user-images.githubusercontent.com/38583473/119226490-631dce00-bb44-11eb-8169-06a62f75555f.png">
+<img width="1440" alt="スクリーンショット 2021-06-30 13 41 33" src="https://user-images.githubusercontent.com/38583473/123903254-509b7d80-d9a9-11eb-850f-4bd85929a6de.png">
 
-- メールが送信されてくるので、6桁の確認コードをコピーします。
-
-***
-
-<img width="1198" alt="スクリーンショット 2021-05-22 21 30 25" src="https://user-images.githubusercontent.com/38583473/119227518-36b88080-bb49-11eb-971d-e3840e4ff8a4.png">
-
-- 確認コードを入力して、 **Log in** をクリックします。
+- **Windows**, **Mac OS**, **Linux** の内、該当するものをクリックします（ダウンロードが始まります)。
 
 ***
 
-<img width="1198" alt="スクリーンショット 2021-05-22 21 33 12" src="https://user-images.githubusercontent.com/38583473/119226708-79785980-bb45-11eb-913c-577782ca94dc.png">
+<img width="1440" alt="スクリーンショット 2021-06-30 13 46 41" src="https://user-images.githubusercontent.com/38583473/123903584-ecc58480-d9a9-11eb-91dd-19f3759be4a6.png">
 
-- **Onward!** をクリックします。
-
-***
-
-<img width="1198" alt="スクリーンショット 2021-05-22 23 25 33" src="https://user-images.githubusercontent.com/38583473/119229947-21495380-bb55-11eb-8aca-48bf162d1263.png">
-
-- **Upgrade** をクリックします。
+- ダウンロードが完了したら、画像の通りの箇所をクリックします。
 
 ***
 
-<img width="1198" alt="スクリーンショット 2021-05-22 23 28 08" src="https://user-images.githubusercontent.com/38583473/119230032-79805580-bb55-11eb-8589-24543bfa9b3b.png">
+<img width="697" alt="スクリーンショット 2021-06-30 13 29 47" src="https://user-images.githubusercontent.com/38583473/123903632-0797f900-d9aa-11eb-9965-3694bbf92b88.png">
 
-- **Basic** の **Upgrade now** をクリックします。
-
-***
-
-<img width="575" alt="スクリーンショット 2021-05-22 23 30 15" src="https://user-images.githubusercontent.com/38583473/119230154-00353280-bb56-11eb-879d-3a091bf4ec88.png">
-
-- カード情報を入力し、 **monthly** / **annually** を任意で選択し、 **Purchase plan** をクリックします **（注意: 料金が発生します）**。
+- 画像のような表示になるので、左から右へドラッグ&ドロップします。
 
 ***
 
-<img width="575" alt="スクリーンショット 2021-05-22 23 36 16" src="https://user-images.githubusercontent.com/38583473/119230353-c31d7000-bb56-11eb-9929-f7183d4b27a8.png">
+<img width="1440" alt="スクリーンショット 2021-06-30 13 50 38" src="https://user-images.githubusercontent.com/38583473/123904285-2fd42780-d9ab-11eb-983a-c7630f925d5d.png">
 
-- **Return to dashboard** をクリックします。
-
-***
-
-<img width="1198" alt="スクリーンショット 2021-05-22 23 19 08" src="https://user-images.githubusercontent.com/38583473/119229743-4e493680-bb54-11eb-9aa2-442eb08d7cc2.png">
-
-- **Destinations** をクリックしてから、 **Add a destination** をクリックします。
+- アプリケーションとしてメニューから選択できるようになっていればOKです。
 
 ***
 
-<img width="1198" alt="スクリーンショット 2021-05-22 23 23 02" src="https://user-images.githubusercontent.com/38583473/119229876-d29bb980-bb54-11eb-896b-7cea9e84fa4d.png">
+### **OBS** に **IVS** で作成したチャンネルを登録
 
-- **Custom RTMP** をクリック
+<img width="1440" alt="スクリーンショット 2021-06-30 13 50 38のコピー" src="https://user-images.githubusercontent.com/38583473/123912371-ec33ea80-d9b7-11eb-9000-084004f4e4aa.png">
+
+- **OBS** を起動します。
 
 ***
 
-<img width="1197" alt="スクリーンショット 2021-05-22 23 51 50" src="https://user-images.githubusercontent.com/38583473/119230963-843ce980-bb59-11eb-9071-2b8c3c4b680a.png">
+<img width="1079" alt="スクリーンショット 2021-06-30 15 30 14" src="https://user-images.githubusercontent.com/38583473/123914696-a298cf00-d9ba-11eb-95bd-c593643e42c8.png">
 
-- 先ほど **1. **IVS** の設定** で最後に控えた下記2つを入力します。
-  - **取り込みサーバー**
-  - **ストリームキー**
-- **Nickname** は **ivs-nuxt-1** と入力し、 **Add RTMP server** をクリックします。
+- 設定ウィザードが立ち上がるので、 **配信のために最適化し、録画は二次的なものとする** を選択して、 **次へ** をクリックする。
+
+***
+
+<img width="1079" alt="スクリーンショット 2021-06-30 15 31 58" src="https://user-images.githubusercontent.com/38583473/123914915-e55aa700-d9ba-11eb-9999-122162b0ba4f.png">
+
+- 次の画面では、そのまま **次へ** をクリックします。
+
+***
+
+<img width="1079" alt="スクリーンショット 2021-06-30 15 41 05" src="https://user-images.githubusercontent.com/38583473/123915056-0d4a0a80-d9bb-11eb-80a3-eee44a715682.png">
+
+- **1. IVS の設定** で控えた、下記の情報をそれぞれのフォームに入力し、 **次へ** をクリックします。
+  - **サーバー**: **IVS** の、 rtmps://6468fb1f4abe.global-contribute.live-video.net:443/app/
+  - **ストリームキー**: **IVS** の、 ストリームキー
+
+***
+
+<img width="1079" alt="スクリーンショット 2021-06-30 15 44 16" src="https://user-images.githubusercontent.com/38583473/123916738-f3a9c280-d9bc-11eb-8329-8ff409866d6f.png">
+
+- **はい** をクリックします。
+- テストが実行されるので、完了するまで待ちます（数分程度)。
+
+***
+
+<img width="1079" alt="スクリーンショット 2021-06-30 15 46 56" src="https://user-images.githubusercontent.com/38583473/123916809-07552900-d9bd-11eb-9710-7f056e0818a9.png">
+
+- テストが完了したら、 **設定を適用** をクリックします。
+- 引き続き **OBS** を使っていくので、このままアプリケーションを開いた状態にしておきます。
 
 ***
 
@@ -243,35 +240,43 @@ npm run dev
 
 ***
 
-### **StreamYard** で配信開始
-
-<img width="810" alt="スクリーンショット 2021-06-12 22 48 35" src="https://user-images.githubusercontent.com/38583473/121778122-787c9a00-cbd0-11eb-83f6-80be67b6b320.png">
-
-- **Create a broadcast** をクリックします。
+### **OBS** で配信開始
 
 ***
 
-<img width="810" alt="スクリーンショット 2021-06-12 22 56 15" src="https://user-images.githubusercontent.com/38583473/121778400-b29a6b80-cbd1-11eb-9241-4f63d9077bf5.png">
+<img width="1079" alt="スクリーンショット 2021-06-30 16 15 52" src="https://user-images.githubusercontent.com/38583473/123919359-d4606480-d9bf-11eb-8c8e-2f09d7639bee.png">
 
-- アイコンをクリックし（マウスオーバーで、 `ivs-nuxt-1` と表示されます）、任意のタイトルを入力して、 **Create broadcast** をクリックします。
-
-***
-
-<img width="549" alt="スクリーンショット 2021-06-12 23 00 46" src="https://user-images.githubusercontent.com/38583473/121778558-613eac00-cbd2-11eb-9708-c0c8a98ddb97.png">
-
-- **Enter studio** をクリックします。
+- ストリーミングデータのソースを追加するために、画像の **+** をクリックします。
 
 ***
 
-<img width="1437" alt="スクリーンショット 2021-06-12 23 06 06" src="https://user-images.githubusercontent.com/38583473/121778802-9d264100-cbd3-11eb-9e1d-e94c72236616.png">
+<img width="1079" alt="スクリーンショット 2021-06-30 16 16 30" src="https://user-images.githubusercontent.com/38583473/123919454-e8a46180-d9bf-11eb-8ff9-44d19865899f.png">
 
-- 左下の顔の表示にマウスオーバーすると、 **Add to stream** と表示されるので、クリックします。
+- **映像キャプチャデバイス** を選択します。
 
 ***
 
-<img width="1437" alt="スクリーンショット 2021-06-12 23 53 31" src="https://user-images.githubusercontent.com/38583473/121780103-cea20b00-cbd9-11eb-8727-57db6c61d6b2.png">
+<img width="1079" alt="スクリーンショット 2021-06-30 16 18 25" src="https://user-images.githubusercontent.com/38583473/123920216-aaf40880-d9c0-11eb-9553-79c8958ea777.png">
 
-- **Go live** をクリックし、ダイアログからさらに **Go live** をクリックします。
+- デフォルトのまま、 **OK** をクリックします。
+
+***
+
+<img width="1079" alt="スクリーンショット 2021-06-30 16 19 21" src="https://user-images.githubusercontent.com/38583473/123921043-906e5f00-d9c1-11eb-9083-9ff0df186d00.png">
+
+- **デバイス** に、各自の環境の有効なカメラデバイス(例では **Snap Camera**, **Mac** のデフォルトの場合、 **FaceTime HDカメラ (内臓)**)を選択し、 **OK** をクリックします。
+
+***
+
+<img width="1079" alt="スクリーンショット 2021-06-30 16 20 50" src="https://user-images.githubusercontent.com/38583473/123921625-2b673900-d9c2-11eb-8716-176a1478a310.png">
+
+- ウィンドウサイズをドラッグ&ドロップで合わせます。
+
+***
+
+<img width="1079" alt="スクリーンショット 2021-06-30 16 21 28" src="https://user-images.githubusercontent.com/38583473/123921663-37eb9180-d9c2-11eb-9106-727d8a43e087.png">
+
+- **配信開始** をクリックします。
 
 ***
 
