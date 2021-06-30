@@ -21,7 +21,7 @@
 ## アーキテクチャ
 - 今回のハンズオンで構築するアーキテクチャです。
 
-![ivs-nuxt (1)](https://user-images.githubusercontent.com/38583473/122328796-3bffc400-cf6b-11eb-9d0b-bd146d2801aa.png)
+![ivs-obs-nuxt](https://user-images.githubusercontent.com/38583473/123924246-bd704100-d9c4-11eb-91dd-7ebcd2474ecd.png)
 
 - **Amplify Console** を使い、 **Nuxt.js** で作成した静的ページをデプロイ・ホスティングします。
 - **OBS** という配信データを送信するアプリケーションを使って、 **Amazon IVS** に対してPC上から動画データを送信します。
