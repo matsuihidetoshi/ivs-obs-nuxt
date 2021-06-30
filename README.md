@@ -262,7 +262,21 @@ npm run dev
 
 ***
 
+<img width="1079" alt="スクリーンショット 2021-06-30 16 19 21" src="https://user-images.githubusercontent.com/38583473/123921043-906e5f00-d9c1-11eb-9083-9ff0df186d00.png">
 
+- **デバイス** に、各自の環境の有効なカメラデバイス(例では **Snap Camera**, **Mac** のデフォルトの場合、 **FaceTime HDカメラ (内臓)**)を選択し、 **OK** をクリックします。
+
+***
+
+<img width="1079" alt="スクリーンショット 2021-06-30 16 20 50" src="https://user-images.githubusercontent.com/38583473/123921625-2b673900-d9c2-11eb-8716-176a1478a310.png">
+
+- ウィンドウサイズをドラッグ&ドロップで合わせます。
+
+***
+
+<img width="1079" alt="スクリーンショット 2021-06-30 16 21 28" src="https://user-images.githubusercontent.com/38583473/123921663-37eb9180-d9c2-11eb-9106-727d8a43e087.png">
+
+- **配信開始** をクリックします。
 
 ***
 
