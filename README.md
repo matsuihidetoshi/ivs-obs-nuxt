@@ -176,6 +176,7 @@
 <img width="1079" alt="スクリーンショット 2021-06-30 15 46 56" src="https://user-images.githubusercontent.com/38583473/123916809-07552900-d9bd-11eb-9710-7f056e0818a9.png">
 
 - テストが完了したら、 **設定を適用** をクリックします。
+- 引き続き **OBS** を使っていくので、このままアプリケーションを開いた状態にしておきます。
 
 ***
 
@@ -239,35 +240,29 @@ npm run dev
 
 ***
 
-### **StreamYard** で配信開始
-
-<img width="810" alt="スクリーンショット 2021-06-12 22 48 35" src="https://user-images.githubusercontent.com/38583473/121778122-787c9a00-cbd0-11eb-83f6-80be67b6b320.png">
-
-- **Create a broadcast** をクリックします。
+### **OBS** で配信開始
 
 ***
 
-<img width="810" alt="スクリーンショット 2021-06-12 22 56 15" src="https://user-images.githubusercontent.com/38583473/121778400-b29a6b80-cbd1-11eb-9241-4f63d9077bf5.png">
+<img width="1079" alt="スクリーンショット 2021-06-30 16 15 52" src="https://user-images.githubusercontent.com/38583473/123919359-d4606480-d9bf-11eb-8c8e-2f09d7639bee.png">
 
-- アイコンをクリックし（マウスオーバーで、 `ivs-nuxt-1` と表示されます）、任意のタイトルを入力して、 **Create broadcast** をクリックします。
-
-***
-
-<img width="549" alt="スクリーンショット 2021-06-12 23 00 46" src="https://user-images.githubusercontent.com/38583473/121778558-613eac00-cbd2-11eb-9708-c0c8a98ddb97.png">
-
-- **Enter studio** をクリックします。
+- ストリーミングデータのソースを追加するために、画像の **+** をクリックします。
 
 ***
 
-<img width="1437" alt="スクリーンショット 2021-06-12 23 06 06" src="https://user-images.githubusercontent.com/38583473/121778802-9d264100-cbd3-11eb-9e1d-e94c72236616.png">
+<img width="1079" alt="スクリーンショット 2021-06-30 16 16 30" src="https://user-images.githubusercontent.com/38583473/123919454-e8a46180-d9bf-11eb-8ff9-44d19865899f.png">
 
-- 左下の顔の表示にマウスオーバーすると、 **Add to stream** と表示されるので、クリックします。
+- **映像キャプチャデバイス** を選択します。
 
 ***
 
-<img width="1437" alt="スクリーンショット 2021-06-12 23 53 31" src="https://user-images.githubusercontent.com/38583473/121780103-cea20b00-cbd9-11eb-8727-57db6c61d6b2.png">
+<img width="1079" alt="スクリーンショット 2021-06-30 16 18 25" src="https://user-images.githubusercontent.com/38583473/123920216-aaf40880-d9c0-11eb-9553-79c8958ea777.png">
 
-- **Go live** をクリックし、ダイアログからさらに **Go live** をクリックします。
+- デフォルトのまま、 **OK** をクリックします。
+
+***
+
+
 
 ***
 
