@@ -138,79 +138,44 @@
 
 ***
 
-## 2. **StreamYard** の登録・設定
+### **OBS** に **IVS** で作成したチャンネルを登録
 
-### **StreamYard** に登録
-- [**StreamYard のトップページ**](https://streamyard.com/) へアクセスします。
+<img width="1440" alt="スクリーンショット 2021-06-30 13 50 38のコピー" src="https://user-images.githubusercontent.com/38583473/123912371-ec33ea80-d9b7-11eb-9000-084004f4e4aa.png">
 
-***
-
-<img width="1438" alt="streamyard_email" src="https://user-images.githubusercontent.com/38583473/119226345-8b58fd00-bb43-11eb-96a4-7f14efd390cc.png">
-
-- 上記にメールアドレスを入力して、 **Get started** をクリックします。
+- **OBS** を起動します。
 
 ***
 
-<img width="866" alt="streamyard_confirmation" src="https://user-images.githubusercontent.com/38583473/119226490-631dce00-bb44-11eb-8169-06a62f75555f.png">
+<img width="1079" alt="スクリーンショット 2021-06-30 15 30 14" src="https://user-images.githubusercontent.com/38583473/123914696-a298cf00-d9ba-11eb-95bd-c593643e42c8.png">
 
-- メールが送信されてくるので、6桁の確認コードをコピーします。
-
-***
-
-<img width="1198" alt="スクリーンショット 2021-05-22 21 30 25" src="https://user-images.githubusercontent.com/38583473/119227518-36b88080-bb49-11eb-971d-e3840e4ff8a4.png">
-
-- 確認コードを入力して、 **Log in** をクリックします。
+- 設定ウィザードが立ち上がるので、 **配信のために最適化し、録画は二次的なものとする** を選択して、 **次へ** をクリックする。
 
 ***
 
-<img width="1198" alt="スクリーンショット 2021-05-22 21 33 12" src="https://user-images.githubusercontent.com/38583473/119226708-79785980-bb45-11eb-913c-577782ca94dc.png">
+<img width="1079" alt="スクリーンショット 2021-06-30 15 31 58" src="https://user-images.githubusercontent.com/38583473/123914915-e55aa700-d9ba-11eb-9999-122162b0ba4f.png">
 
-- **Onward!** をクリックします。
-
-***
-
-<img width="1198" alt="スクリーンショット 2021-05-22 23 25 33" src="https://user-images.githubusercontent.com/38583473/119229947-21495380-bb55-11eb-8aca-48bf162d1263.png">
-
-- **Upgrade** をクリックします。
+- 次の画面では、そのまま **次へ** をクリックします。
 
 ***
 
-<img width="1198" alt="スクリーンショット 2021-05-22 23 28 08" src="https://user-images.githubusercontent.com/38583473/119230032-79805580-bb55-11eb-8589-24543bfa9b3b.png">
+<img width="1079" alt="スクリーンショット 2021-06-30 15 41 05" src="https://user-images.githubusercontent.com/38583473/123915056-0d4a0a80-d9bb-11eb-80a3-eee44a715682.png">
 
-- **Basic** の **Upgrade now** をクリックします。
-
-***
-
-<img width="575" alt="スクリーンショット 2021-05-22 23 30 15" src="https://user-images.githubusercontent.com/38583473/119230154-00353280-bb56-11eb-879d-3a091bf4ec88.png">
-
-- カード情報を入力し、 **monthly** / **annually** を任意で選択し、 **Purchase plan** をクリックします **（注意: 料金が発生します）**。
+- **1. IVS の設定** で控えた、下記の情報をそれぞれのフォームに入力し、 **次へ** をクリックします。
+  - **サーバー**: **IVS** の、 rtmps://6468fb1f4abe.global-contribute.live-video.net:443/app/
+  - **ストリームキー**: **IVS** の、 ストリームキー
 
 ***
 
-<img width="575" alt="スクリーンショット 2021-05-22 23 36 16" src="https://user-images.githubusercontent.com/38583473/119230353-c31d7000-bb56-11eb-9929-f7183d4b27a8.png">
+<img width="1079" alt="スクリーンショット 2021-06-30 15 44 16" src="https://user-images.githubusercontent.com/38583473/123916738-f3a9c280-d9bc-11eb-8329-8ff409866d6f.png">
 
-- **Return to dashboard** をクリックします。
-
-***
-
-<img width="1198" alt="スクリーンショット 2021-05-22 23 19 08" src="https://user-images.githubusercontent.com/38583473/119229743-4e493680-bb54-11eb-9aa2-442eb08d7cc2.png">
-
-- **Destinations** をクリックしてから、 **Add a destination** をクリックします。
+- **はい** をクリックします。
+- テストが実行されるので、完了するまで待ちます（数分程度)。
 
 ***
 
-<img width="1198" alt="スクリーンショット 2021-05-22 23 23 02" src="https://user-images.githubusercontent.com/38583473/119229876-d29bb980-bb54-11eb-896b-7cea9e84fa4d.png">
+<img width="1079" alt="スクリーンショット 2021-06-30 15 46 56" src="https://user-images.githubusercontent.com/38583473/123916809-07552900-d9bd-11eb-9710-7f056e0818a9.png">
 
-- **Custom RTMP** をクリック
-
-***
-
-<img width="1197" alt="スクリーンショット 2021-05-22 23 51 50" src="https://user-images.githubusercontent.com/38583473/119230963-843ce980-bb59-11eb-9071-2b8c3c4b680a.png">
-
-- 先ほど **1. **IVS** の設定** で最後に控えた下記2つを入力します。
-  - **取り込みサーバー**
-  - **ストリームキー**
-- **Nickname** は **ivs-nuxt-1** と入力し、 **Add RTMP server** をクリックします。
+- テストが完了したら、 **設定を適用** をクリックします。
 
 ***
 
