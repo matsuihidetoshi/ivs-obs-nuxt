@@ -229,7 +229,7 @@ npm run dev
 
 ***
 
-<img width="1439" alt="スクリーンショット 2021-06-12 22 17 22" src="https://user-images.githubusercontent.com/38583473/121777405-d0b19d00-cbcc-11eb-8ad0-72088d315907.png">
+<img width="1440" alt="スクリーンショット 2021-07-04 15 05 30" src="https://user-images.githubusercontent.com/38583473/124375212-01708800-dcdc-11eb-9543-08dd4fc0e58b.png">
 
 - **Preview** をクリックしてから、 **Preview Running Application** をクリックします。
 
